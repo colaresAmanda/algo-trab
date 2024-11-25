@@ -404,16 +404,16 @@ void showUserMenu()
 
     candidates = getCandidates();
     candidates = sortCandidates(candidates);
-
-    while (op != 0)
+    int op_ = 0;
+    while (op >= 0)
     {
         printf("\n\n");
         listCandidates();
-        printf("\n\tBlank vote - 999\n\tExit program - 0\n");
+        printf("\n\tBlank vote - 999\n\tExit program - -1\n");
         printf("\nEnter your vote: ");
         gets(op);
-
-        if (strcmp(op, "0") == 0) 
+        op_ = atoi(op);
+        if (op_ < 0) 
         {
             clrscr();
             printf("Ending program.\n");
