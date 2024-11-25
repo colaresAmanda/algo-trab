@@ -1,0 +1,2 @@
+user | password123
+admin | password123
